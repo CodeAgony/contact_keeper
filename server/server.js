@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => res.send('Who\'s there?'));
+app.get('/', (req, res) => res.json({ msg: 'Welcome to the Contact Keeer API!' }));
 
 const PORT = process.env.PORT || 5000;
 
