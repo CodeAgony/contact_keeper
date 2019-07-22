@@ -4,12 +4,7 @@
 		"es6": true,
 		"node": true
 	},
-	"extends": [
-		"airbnb",
-		"plugin:react/recommended",
-		"eslint-config-prettier",
-		"prettier"
-	],
+	"extends": ["airbnb", "plugin:react/recommended"],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
