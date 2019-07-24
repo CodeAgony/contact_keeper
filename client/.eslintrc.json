@@ -4,7 +4,7 @@
 		"es6": true,
 		"node": true
 	},
-	"extends": ["airbnb", "plugin:react/recommended"],
+	"extends": ["wesbos", "plugin:react/recommended"],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
@@ -19,6 +19,7 @@
 	"plugins": ["react"],
 	"rules": {
 		"no-tabs": ["error", { "allowIndentationTabs": true }],
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"import/no-extraneous-dependencies": 0
 	}
 }
