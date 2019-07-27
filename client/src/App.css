@@ -136,6 +136,9 @@ img {
 .m {
   margin: 0.5rem;
 }
+.ml {
+  margin-left: 0.5rem;
+}
 .m-1 {
   margin: 1rem;
 }
@@ -398,6 +401,11 @@ table th {
 .item-exit-active {
   opacity: 0;
   transition: opacity 1000ms ease-in;
+}
+
+ /* Display */
+.bl {
+  display: block;
 }
 
 /* Mobile Styles */
