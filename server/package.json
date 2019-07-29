@@ -5,7 +5,10 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"server": "nodemon server.js"
+		"server": "nodemon server.js",
+		"client": "npm start --prefix ../client",
+		"clientinstall": "npm install --prefix ../client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"keywords": [],
 	"author": "Yaroslav Bukhta aka CodeAgony",
@@ -20,8 +23,6 @@
 	},
 	"devDependencies": {
 		"concurrently": "^4.1.1",
-		"eslint": "^6.1.0",
-		"eslint-config-recommended": "^4.0.0",
 		"eslint-plugin-node": "^9.1.0",
 		"nodemon": "^1.19.1"
 	}
