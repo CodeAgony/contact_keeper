@@ -1,44 +1,56 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
-    },
-    "extends": [
-        "airbnb",
-        "prettier",
-        "plugin:react/recommended"
-    ],
-    "plugins": [
-        "react",
-        "prettier",
-        "react-hooks"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "rules": {
-        "prettier/prettier": "error",
-        "import/no-extraneous-dependencies": 0,
-        "react/jsx-indent": [
-            1,
-            "tab"
-        ],
-        "react/jsx-indent-props": [
-            2,
-            "tab"
-        ],
-        "react/jsx-filename-extension": 0,
-        "indent": [
-            2,
-            "tab"
-        ]
-    }
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"airbnb",
+		"prettier"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"ecmaFeatures": {
+		"jsx": true,
+		"modules": true
+	},
+	"rules": {
+		"prettier/prettier": "error",
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		],
+		"react/jsx-uses-react": 2,
+		"react/jsx-uses-vars": 2,
+		"react/react-in-jsx-scope": 2,
+		"import/no-extraneous-dependencies": 0,
+		"react/jsx-indent": 0,
+		"react/jsx-indent-props": 0,
+		"react/jsx-one-expression-per-line": 0,
+		"react/destructuring-assignment": 0,
+		"react/forbid-prop-types": 0,
+		"react/prop-types": 1,
+		"no-unused-vars": 0,
+		"prefer-template": 0,
+		"no-param-reassign": 0
+	},
+	"plugins": [
+		"prettier",
+		"react",
+		"react-hooks",
+		"jsx-a11y"
+	]
 }
