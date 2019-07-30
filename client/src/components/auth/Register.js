@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import AlertContext from '../../context/alert/alertContext';
 
 const Register = () => {
+	const alertContext = useContext(AlertContext);
+
+	const { setAlert } = alertContext;
+
 	const [user, setUser] = useState({
 		name: '',
 		email: '',
@@ -14,7 +19,15 @@ const Register = () => {
 
 	const onSubmit = e => {
 		e.preventDefault();
-		console.log('submit register');
+		if (name === '' || email === '' || password === '') {
+			setAlert('Please fill in all the fields', 'danger');
+		} else if (password.length < 6) {
+			setAlert('Please make your pasword at least 6 characters long', 'danger');
+		} else if (password !== password2) {
+			setAlert('Passwords do not match', 'danger');
+		} else {
+			console.log('Submit register');
+		}
 	};
 
 	return (
@@ -32,7 +45,6 @@ const Register = () => {
 							id="name"
 							value={name}
 							onChange={onChange}
-							required
 						/>
 					</label>
 
@@ -44,7 +56,6 @@ const Register = () => {
 							id="email"
 							value={email}
 							onChange={onChange}
-							required
 						/>
 					</label>
 
@@ -54,9 +65,9 @@ const Register = () => {
 							type="text"
 							name="password"
 							id="password"
+							placeholder="At least 6 characters for your safety"
 							value={password}
 							onChange={onChange}
-							required
 						/>
 					</label>
 
@@ -68,7 +79,6 @@ const Register = () => {
 							id="password2"
 							value={password2}
 							onChange={onChange}
-							required
 						/>
 					</label>
 
