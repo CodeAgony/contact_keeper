@@ -4,6 +4,7 @@ import {
 	SET_CURRENT,
 	CLEAR_CURRENT,
 	UPDATE_CONTACT,
+	CONTACT_ERROR,
 	FILTER_CONTACTS,
 	CLEAR_FILTER,
 	SET_ALERT,
@@ -49,6 +50,11 @@ export default (state, action) => {
 						contact.phone.match(regex)
 					);
 				}),
+			};
+		case CONTACT_ERROR:
+			return {
+				...state,
+				error: action.payload,
 			};
 		case CLEAR_FILTER:
 			return {
