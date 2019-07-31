@@ -11,7 +11,7 @@ const ContactItem = ({ contact }) => {
 		clearCurrent();
 	};
 
-	const { id, name, email, phone, type } = contact;
+	const { name, email, phone, type } = contact;
 	return (
 		<div className="card bg-light" style={{ margin: '0 auto' }}>
 			<h3 className="text-primary text-left">
