@@ -7,6 +7,7 @@ import {
 	UPDATE_CONTACT,
 	CONTACT_ERROR,
 	FILTER_CONTACTS,
+	CLEAR_CONTACTS,
 	CLEAR_FILTER,
 	SET_ALERT,
 	REMOVE_ALERT,
@@ -68,6 +69,14 @@ export default (state, action) => {
 			return {
 				...state,
 				error: action.payload,
+			};
+		case CLEAR_CONTACTS:
+			return {
+				...state,
+				contacts: null,
+				filtered: null,
+				error: null,
+				current: null,
 			};
 		case CLEAR_FILTER:
 			return {
