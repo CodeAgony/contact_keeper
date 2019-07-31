@@ -28,7 +28,6 @@ export default (state, action) => {
 				loading: false,
 				user: null,
 				error: action.payload,
-				test: 'success',
 			};
 		case USER_LOADED:
 			return {
@@ -63,6 +62,15 @@ export default (state, action) => {
 				loading: false,
 				user: null,
 				error: action.payload,
+			};
+		case LOGOUT:
+			localStorage.removeItem('token');
+			return {
+				...state,
+				token: null,
+				isAuthenticated: false,
+				loading: false,
+				user: null,
 			};
 		case CLEAR_ERRORS:
 			return {
