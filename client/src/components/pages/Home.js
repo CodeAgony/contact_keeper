@@ -16,8 +16,9 @@ const Home = () => {
 
 	const isRecordEmpty = () => {
 		if (
-			contactContext.contacts !== null &&
-			contactContext.contacts.length !== 0
+			contactContext.contacts === null &&
+			contactContext.contacts.length === 0 &&
+			!authContext.loading
 		) {
 			return true;
 		}
@@ -27,7 +28,7 @@ const Home = () => {
 		<div className="grid-2">
 			<ContactForm />
 			<div style={{ justifySelf: 'center' }}>
-				{!isRecordEmpty && (
+				{isRecordEmpty && (
 					<div>
 						<ContactFilter />
 					</div>
