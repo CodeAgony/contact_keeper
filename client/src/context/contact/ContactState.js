@@ -13,8 +13,6 @@ import {
 	FILTER_CONTACTS,
 	CONTACT_ERROR,
 	CLEAR_FILTER,
-	SET_ALERT,
-	REMOVE_ALERT,
 } from '../types';
 
 const ContactState = props => {
