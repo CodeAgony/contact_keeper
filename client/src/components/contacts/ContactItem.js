@@ -6,12 +6,13 @@ const ContactItem = ({ contact }) => {
 	const contactContext = useContext(ContactContext);
 	const { deleteContact, setCurrent, clearCurrent } = contactContext;
 
+	const { _id, name, email, phone, type } = contact;
+
 	const onDelete = () => {
-		deleteContact(contact.id);
+		deleteContact(_id);
 		clearCurrent();
 	};
 
-	const { name, email, phone, type } = contact;
 	return (
 		<div className="card bg-light" style={{ margin: '0 auto' }}>
 			<h3 className="text-primary text-left">

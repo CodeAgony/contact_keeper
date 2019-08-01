@@ -14,11 +14,21 @@ const Home = () => {
 		// eslint-disable-next-line
 	}, [])
 
+	const isRecordEmpty = () => {
+		if (
+			contactContext.contacts === null &&
+			contactContext.contacts.length === 0 &&
+			!authContext.loading
+		) {
+			return true;
+		}
+	};
+
 	return (
 		<div className="grid-2">
 			<ContactForm />
 			<div style={{ justifySelf: 'center' }}>
-				{contactContext.contacts.length !== 0 && (
+				{isRecordEmpty && (
 					<div>
 						<ContactFilter />
 					</div>
