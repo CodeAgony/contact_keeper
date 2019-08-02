@@ -14,11 +14,10 @@ const ContactItem = ({ contact }) => {
 	};
 
 	return (
-		<div className="card bg-light" style={{ margin: '0 auto' }}>
-			<h3 className="text-primary text-left">
+		<div className="card bg-light">
+			<h3 className="text-primary text-left bl">
 				{name}{' '}
 				<span
-					// style={{ float: 'right' }}
 					className={`badge
 						${type === 'professional' ? 'badge-success' : 'badge-primary'}`}
 				>
@@ -27,10 +26,15 @@ const ContactItem = ({ contact }) => {
 				</span>
 			</h3>
 			<ul className="list">
-				{email && <li className="fas fa-envelope-open bl"> {email}</li>}
+				{email && (
+					<li className="fas fa-envelope-open bl">
+						{' '}
+						{email} <br />{' '}
+					</li>
+				)}
 				{phone && <li className="fas fa-phone bl"> {phone}</li>}
 			</ul>
-			<p>
+			<p className="bl">
 				<button
 					type="button"
 					className="btn btn-dark btn-sm"

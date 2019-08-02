@@ -26,7 +26,7 @@ const App = () => (
 				<Router>
 					<Fragment>
 						<Navbar icon="fas fa-id-card" title=" ContactKeeper" />
-						<div className="containter">
+						<div className="containter m-1">
 							<Alerts />
 							<Switch>
 								<PrivateRoute exact path="/" component={Home} />

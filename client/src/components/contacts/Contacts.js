@@ -14,7 +14,7 @@ const Contacts = () => {
 	}, [])
 
 	if (contacts !== null && contacts.length === 0 && !loading) {
-		return <h4>Feel free to add your contacts</h4>;
+		return <h5>Nothing to filter yet. Feel free to add your contacts</h5>;
 	}
 
 	return (

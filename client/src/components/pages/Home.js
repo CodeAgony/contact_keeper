@@ -9,26 +9,20 @@ const Home = () => {
 	const authContext = useContext(AuthContext);
 	const contactContext = useContext(ContactContext);
 
+	const { contacts } = contactContext;
+
 	useEffect(() => {
 		authContext.loadUser();
 		// eslint-disable-next-line
-	}, [])
+	}, []);
 
-	const isRecordEmpty = () => {
-		if (
-			contactContext.contacts === null &&
-			contactContext.contacts.length === 0 &&
-			!authContext.loading
-		) {
-			return true;
-		}
-	};
+	const contactsEmpty = contacts === null;
 
 	return (
 		<div className="grid-2">
 			<ContactForm />
-			<div style={{ justifySelf: 'center' }}>
-				{isRecordEmpty && (
+			<div>
+				{!contactsEmpty && (
 					<div>
 						<ContactFilter />
 					</div>
