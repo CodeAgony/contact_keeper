@@ -4,7 +4,6 @@
 		"es6": true
 	},
 	"extends": [
-		"airbnb",
 		"prettier"
 	],
 	"globals": {
@@ -17,10 +16,6 @@
 		},
 		"ecmaVersion": 2018,
 		"sourceType": "module"
-	},
-	"ecmaFeatures": {
-		"jsx": true,
-		"modules": true
 	},
 	"rules": {
 		"prettier/prettier": "error",
